@@ -6,7 +6,7 @@ function ArticleList({ articles }) {
     return (
         <ul aria-label="articles">
             {articles.map((article) => (
-                <li key={`${article.title}-${article.author}`}>
+                <li key={`${article.title}-${article.url}`}>
                     <Article 
                     title={article.title}
                     urlToImage={article.urlToImage}

@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 const Search= ({ query, onQueryChange, onSubmit }) => (
         <form onSubmit={onSubmit}>
             <label htmlFor="news-search">News Search</label>
-            <input 
+            <input
+            placeholder="search news"
             id="news-search"
             type="text"
             value={query}
