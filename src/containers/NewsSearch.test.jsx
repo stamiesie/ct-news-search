@@ -1,4 +1,6 @@
 import React from 'react';
+import dotenv, { config } from 'dotenv';
+dotenv.config();
 import { render, screen, waitFor } from '@testing-library/react';
 import NewsSearch from './NewsSearch';
 import userEvent from '@testing-library/user-event';
