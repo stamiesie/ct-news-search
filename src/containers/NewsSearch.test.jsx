@@ -8,7 +8,13 @@ describe( 'NewSearch Container', () => {
 
         screen.getByText('Loading...');
 
-        const ul = await screen.findByRole('list', {name: articles});
+        const ul = await screen.findByRole('list', { name: 'articles' });
         expect(ul).not.toBeEmptyDOMElement();
+
+        const input = await screen.findByLabelText('news-search');
+        userEvent.type(input, 'puppies');
+
+        const submitButton = await screen.findByRole('button', {name: 'get-news'});
+        userEvent.click(submitButton);
     });
 });
