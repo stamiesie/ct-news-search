@@ -1,14 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from '/src/components/presentation/styles.css';
 
 function Article({ title, urlToImage, author, description, url }) {
     return (
+        <div className={styles.article}>
+        <a href={url}>
         <div>
            <h2>{title}</h2>
            <img src={urlToImage} alt="article-image" />
            <p>{author}</p> 
            <p>{description}</p>
-           <p>{url}</p>
+           {/* <a href={url}>Click For Full Story</a> */}
+           <p>Click For Full Story</p>
+        </div>
+        </a>
         </div>
     )
 }
