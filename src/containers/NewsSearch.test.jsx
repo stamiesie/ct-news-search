@@ -20,7 +20,7 @@ describe( 'NewSearch Container', () => {
 
         return waitFor(() => {
             const articles = screen.getAllByText('Biden', {exact: false });
-        }
-        )
+            expect(articles).not.toHaveLength(0);
+        });
     });
 });
