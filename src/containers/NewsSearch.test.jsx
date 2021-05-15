@@ -14,8 +14,9 @@ describe( 'NewSearch Container', () => {
         const ul = await screen.findByRole('list', { name: 'articles' });
         expect(ul).not.toBeEmptyDOMElement();
 
-        const input = screen.getByPlaceholderText('search news');
+        const input = await screen.getByPlaceholderText('search news');
         userEvent.type(input, 'Biden');
+        
 
         const submitButton = await screen.findByRole('button', {name: 'get-news'});
         userEvent.click(submitButton);
